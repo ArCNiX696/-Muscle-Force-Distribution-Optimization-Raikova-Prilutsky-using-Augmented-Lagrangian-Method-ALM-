@@ -1,62 +1,79 @@
-# 🩺🔬 Cancer Detection and Segmentation using YOLO v8 with PyQt5 GUI
-
-![YOLOv8 Logo](assets/yolov8.png)
+# 💪🧠 Muscle Force Distribution Optimization using Augmented Lagrangian Method (ALM)
 
 ---
 
-## 🚀 Getting Started with the Project
-To experience this project, simply follow these steps:
+## 📄 Project Description
 
-1. Open the `snow_main.py` file.
-2. Load a dataset from the `dataset` folder, or alternatively, you can use your own dataset.
-
-> 📂 **Important Note**:  
-> Do not delete the `Sorted Data` folder within the dataset directory.
+This project contains two numerical optimization exercises related to muscle force distribution. Both exercises were solved using gradient-based methods and include analytical derivation of gradients and constraints.
 
 ---
 
-## 🗂️ **Model Files:**
-- Files with the extension `.pt` and a **"detect"** in their name are dedicated to detection models.
-- Files with the extension `.pt` and a **"segment"** in their name are intended for segmentation models.
+## 🧩 Exercise 1: Quadratic Function with Equality Constraint (DFP Method)
+
+- **Objective**: Minimize a quadratic objective function  
+- **Constraint**: One linear equality constraint  
+- **Method used**: Davidon–Fletcher–Powell (DFP)  
+- **Penalty approach**: Reformulated using squared constraint penalization  
+- **Line Search**: Armijo backtracking for step-size selection  
+- **Final Solution**:  
+  - `x ≈ [0.857, 2.571, 1.714]`  
+  - `F(x) ≈ 10.28`  
+- 📈 The algorithm converged in **3 iterations**, and you can find the convergence plot in the output.
 
 ---
 
-## 📄 **Project Explanation**  
-For a detailed understanding of the project, please refer to the PDF file:  
-👉 **[Explanation_README.pdf](Explanation_README.pdf)**
+## 📌 Exercise 2: Muscle Force Distribution Problem (Based on Raikova & Prilutsky)
+
+- **Paper Reference**:  
+  **"Sensitivity of predicted muscle forces to parameters of the optimization-based human leg model revealed by analytical and numerical analyses"**  
+  *Raikova, R.T. & Prilutsky, B.I., Journal of Biomechanics, 2001*  
+  DOI: [10.1016/S0021-9290(01)00097-5](https://doi.org/10.1016/S0021-9290(01)00097-5)  
+  📄 *(The PDF of the paper is included in the repository)*
+
+- **Method used**:  
+  - Augmented Lagrangian Method (ALM)  
+  - Gradient Descent (GD) for iterative optimization  
+  - Analytical derivation of constraint gradients and Jacobian  
+
+- **Constraints**:  
+  - 3 linear equality constraints  
+  - Non-negativity of all forces (handled via projection)
+
+- **Final Results**:
+  - Optimal Forces: `F1 to F9` listed in terminal output
+  - Objective Value: `Z(F) ≈ 626.27`
 
 ---
 
-## 🖼️ **Project Visualizations**
+## 📊 Report and Analysis
 
-### 🪟 **Main Interface View**
-![Main Interface View](assets/SNOW%20MAIN%20VIEW%20IMAGE.png)
-*This is the main interface of the PyQt5 GUI where users can load datasets and navigate through images for detection and segmentation.*
-
----
-
-### 🧬 **Segmentation Results View**
-![Segmentation Results View](assets/SEGMENTATION%20VIEW%20IMAGE.png)
-*This image shows the segmentation results using the YOLO v8 model, highlighting the detected cancer regions.*
+> ✍️ A detailed analysis and explanation of the derivations, methodology, convergence plots, and results for both exercises is provided in:  
+> 👉 **[Report.pdf](Report.pdf)**
 
 ---
 
-### 📊 **Metrics and Results View**
-![Metrics and Results View](assets/METRICSRESULTS%20VIEW%20IMAGE.png)
-*Displays the calculated performance metrics including IoU, Accuracy, Precision, Recall, and Dice Coefficient after running the models.*
+## 📁 Repository Structure
+
+- `exercise1_dfp.py`: Implementation of DFP method for Exercise 1  
+- `exercise2_alm.py`: ALM + GD for muscle force optimization  
+- `Report.pdf`: Final project report  
+- `Raikova_Priltusky_Paper.pdf`: Original paper for reference
 
 ---
 
-### 🔍 **Detection Results View**
-![Detection Results View](assets/DETECTION%20VIEW%20IMAGE.png)
-*The YOLO v8 detection results showing identified cancer regions with confidence scores.*
+## 🧪 Visualization
+
+### 📈 Objective vs Penalized Function (ALM)
+![Objective vs Penalized](assets/ALM_convergence.png)
+
+### 🔻 Constraint Violation (Log Scale)
+![Constraint Violation](assets/Constraint_violation_log.png)
 
 ---
 
-## 📥 **Cloning the Repository**
+## 📥 Cloning the Repository
+
 ```bash
-git clone https://github.com/ArCNiX696/Cancer-Detection-and-Segmentation-using-YOLO-v8-with-PyQt5-GUI.git
-cd Cancer-Detection-and-Segmentation-using-YOLO-v8-with-PyQt5-GUI
+git clone https://github.com/ArCNiX696/-Muscle-Force-Distribution-Optimization-Raikova-Prilutsky-using-Augmented-Lagrangian-Method-ALM-.git
+cd -Muscle-Force-Distribution-Optimization-Raikova-Prilutsky-using-Augmented-Lagrangian-Method-ALM-
 
-
-# -Muscle-Force-Distribution-Optimization-Raikova-Prilutsky-using-Augmented-Lagrangian-Method-ALM-
